@@ -1,0 +1,199 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web Developer — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; 
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#7c3aed;
+      --glass: rgba(255,255,255,0.04);
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef8;background:linear-gradient(180deg,#071023 0%,#081229 60%);}
+    .container{max-width:1100px;margin:48px auto;padding:24px}header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:14px}
+.avatar{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#0ea5a3);display:flex;align-items:center;justify-content:center;font-weight:700;color:white}
+h1{font-size:1.5rem;margin:0}
+p.lead{margin:4px 0 0;color:var(--muted)}
+
+nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+main{display:grid;grid-template-columns:1fr 340px;gap:26px;margin-top:28px}
+
+
+section.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),var(--glass));padding:20px;border-radius:14px;box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+.about p{color:var(--muted);line-height:1.6}
+
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.skill{padding:8px 10px;border-radius:999px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.03);font-weight:600}
+
+.companies{display:flex;flex-direction:column;gap:10px}
+.company{display:flex;align-items:center;gap:12px;padding:10px;border-radius:10px;background:rgba(255,255,255,0.02)}
+.company img{width:44px;height:44px;border-radius:8px;object-fit:cover}
+.company .meta{color:var(--muted);font-size:0.95rem}
+
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+.project{padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.02)}
+.project h4{margin:0 0 8px}
+.project p{margin:0;color:var(--muted);font-size:0.92rem}
+.project .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+
+
+aside.contact{position:sticky;top:28px;height:max-content}
+.contact h3{margin-top:0}
+.contact .card-inner{display:flex;flex-direction:column;gap:10px}
+.contact button{padding:10px 14px;border-radius:10px;border:0;background:linear-gradient(90deg,var(--accent),#0ea5a3);color:white;font-weight:700;cursor:pointer}
+
+footer{margin-top:28px;color:var(--muted);text-align:center}
+
+
+@media (max-width:920px){main{grid-template-columns:1fr} .projects-grid{grid-template-columns:1fr}}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">AG</div>
+        <div>
+          <h1>Aditya Gagra — Web Developer</h1>
+          <p class="lead">I build fast, accessible web apps and beautiful user interfaces.</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#companies">Companies</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header><main>
+  <div>
+    
+    <section id="about" class="card about">
+      <h2>About Me</h2>
+      <p>I’m a web developer who loves turning complex problems into simple, beautiful, and fast user experiences. I primarily work with HTML, CSS, JavaScript, and modern frameworks like React and Node.js. I focus on performance, accessibility, and scalable architecture.</p>
+
+      <div class="skills" aria-hidden>
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">React</span>
+        <span class="skill">Node.js</span>
+        <span class="skill">TypeScript</span>
+        <span class="skill">Tailwind</span>
+        <span class="skill">Next.js</span>
+      </div>
+    </section>
+
+    
+    <section id="companies" class="card" style="margin-top:18px">
+      <h2>Companies I've Worked For</h2>
+      <div class="companies">
+        
+        <div class="company">
+          <img src="https://via.placeholder.com/80x80.png?text=C1" alt="Company 1 logo">
+          <div>
+            <div style="font-weight:700">Awesome Studio</div>
+            <div class="meta">Frontend Developer • Jan 2022 — Present</div>
+          </div>
+        </div>
+
+        <div class="company">
+          <img src="https://via.placeholder.com/80x80.png?text=C2" alt="Company 2 logo">
+          <div>
+            <div style="font-weight:700">Startup X</div>
+            <div class="meta">Web Developer • Jun 2020 — Dec 2021</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <section id="projects" class="card" style="margin-top:18px">
+      <h2>Projects</h2>
+      <p class="lead">Selected projects — click to view (links are placeholders).</p>
+
+      <div class="projects-grid">
+        <article class="project">
+          <h4>Project One</h4>
+          <p>Landing page for a SaaS with smooth animations, A/B tested hero, and 98 performance score.</p>
+          <div class="tags"><small class="meta">React • Vite • Netlify</small></div>
+        </article>
+
+        <article class="project">
+          <h4>Project Two</h4>
+          <p>E-commerce prototype with cart microinteractions and accessible forms.</p>
+          <div class="tags"><small class="meta">Next.js • Stripe • Tailwind</small></div>
+        </article>
+
+        <article class="project">
+          <h4>Project Three</h4>
+          <p>Progressive web app (PWA) for todos with offline sync and push notifications.</p>
+          <div class="tags"><small class="meta">PWA • Service Worker • IndexedDB</small></div>
+        </article>
+
+        <article class="project">
+          <h4>Open-source Library</h4>
+          <p>A small UI component library published to npm with thorough docs and tests.</p>
+          <div class="tags"><small class="meta">TypeScript • Rollup • Jest</small></div>
+        </article>
+
+      </div>
+    </section>
+
+  </div>
+
+  <aside class="contact card" id="contact">
+    <div class="card-inner">
+      <h3>Contact</h3>
+      <p class="meta">I’m available for freelance and full-time roles. Reach out and let’s build something great.</p>
+
+      <div>
+        <strong>Email</strong>
+        <div style="color:var(--muted)">your.email@example.com</div>
+      </div>
+
+      <div>
+        <strong>Phone</strong>
+        <div style="color:var(--muted)">+91 98765 43210</div>
+      </div>
+
+      <div>
+        <strong>Location</strong>
+        <div style="color:var(--muted)">Bangalore, India</div>
+      </div>
+
+      <a href="mailto:your.email@example.com"><button type="button">Email me</button></a>
+
+      <div style="margin-top:12px">
+        <strong>Social</strong>
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="Twitter">Twitter</a>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+</main>
+
+<footer>
+  <small>Built with ❤ — Replace this template with your details. © <span id="year"></span></small>
+</footer>
+
+  </div>  <script>
+   
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+  </script></body>
+</html>
